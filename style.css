@@ -307,3 +307,56 @@ footer{background:var(--tinta);color:#fff;padding:50px 5% 30px;font-size:.85rem}
   [data-animar]{opacity:1;transform:none}
   .territorio{animation:none}
 }
+
+/* =========================================================
+   AJUSTE DE TAMANHO DE FONTE (Reduzido para melhor leitura)
+   ========================================================= */
+
+/* 1. Reduz a base de todo o site (de 16px para 15px) */
+html {
+  font-size: 15px; 
+}
+
+/* 2. Título principal do topo (Hero) */
+.heroi h1 {
+  font-size: clamp(1.7rem, 4vw, 2.6rem) !important; 
+}
+
+/* 3. Títulos das seções (H2) */
+.abertura-secao h2 {
+  font-size: clamp(1.3rem, 2.8vw, 1.9rem) !important; 
+}
+
+/* 4. Números grandes de seção (01, 02, etc.) */
+.numero-secao {
+  font-size: 2.4rem !important; 
+}
+
+/* 5. Números de destaque nos cards (ex: 22,4%, 1,6x) */
+.numero-grande {
+  font-size: 3rem !important; 
+}
+.card-problema.destaque-rosa .numero-grande {
+  font-size: 2.4rem !important; 
+}
+
+/* 6. Números de impacto */
+.impacto-numero {
+  font-size: 2.2rem !important; 
+}
+
+/* 7. Textos de parágrafo e apoio (deixa mais compacto) */
+.lede {
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem) !important;
+}
+.apoio, 
+.card-problema p, 
+.etapa-conteudo p,
+.playbook-descricao {
+  font-size: 0.9rem !important;
+}
+
+/* 8. Ajuste fino nos cards de playbook para não ficar apertado */
+.playbook-header h3 {
+  font-size: 1.05rem !important;
+}
