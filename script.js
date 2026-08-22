@@ -114,7 +114,6 @@
     { chave:'P', nome:'Parceria local (P)', peso:0.10 }
   ];
 
-  // popula select
   territorios.forEach((t,i) => {
     const opt = document.createElement('option');
     opt.value = i;
@@ -133,7 +132,6 @@
     iptPrioEl.textContent = p.label;
     iptPrioEl.className = 'prioridade-tag ' + p.classe;
 
-    // barras
     barrasEl.innerHTML = '';
     dimensoes.forEach(d => {
       const valor = t[d.chave];
@@ -145,13 +143,11 @@
         <span class="dimensao-valor">${valor}</span>
       `;
       barrasEl.appendChild(item);
-      // animação
       requestAnimationFrame(() => {
         item.querySelector('.dimensao-preenchimento').style.width = valor + '%';
       });
     });
 
-    // barreiras
     barreirasEl.innerHTML = '';
     t.barreiras.forEach(b => {
       const li = document.createElement('li');
@@ -163,7 +159,6 @@
     canaisEl.textContent = t.canais;
     indicadorEl.textContent = t.indicador;
 
-    // cadeia de decisão
     cadeiaEl.innerHTML = `
       <div class="cadeia-elo"><b>Dado</b>IBGE · DataViva · EPT</div>
       <span class="cadeia-seta">→</span>
@@ -193,7 +188,6 @@
     });
   }
 
-  // Gráfico 1: Urbano vs Rural
   const g1 = document.getElementById('graficoSemSem');
   if(g1){
     criarBarra(g1, 'Urbano 15–29', 25, '');
@@ -202,7 +196,6 @@
     criarBarra(g1, 'Rural 18–24', 42, 'rural');
   }
 
-  // Gráfico 2: Internet
   const g2 = document.getElementById('graficoInternet');
   if(g2){
     criarBarra(g2, 'Centro urbano', 82, '');
@@ -211,7 +204,6 @@
     criarBarra(g2, 'Rural Sul', 15, 'rural');
   }
 
-  // Gráfico 3: Top 10 territórios
   const g3 = document.getElementById('graficoTop');
   if(g3){
     const top10 = [
@@ -231,7 +223,6 @@
     });
   }
 
-  // Gráfico 4: Economia × Formação
   const g4 = document.getElementById('graficoEconomia');
   if(g4){
     criarBarra(g4, 'Agroindústria — emprego', 72, 'economia');
