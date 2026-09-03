@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#1A0B2E">
   <meta name="description" content="Radar Nexus — inteligência territorial preditiva para a inclusão produtiva de jovens. Nexus Team, Desafio dos Dados 2026.">
+  <meta name="keywords" content="Radar Nexus, inclusão produtiva, jovens, ODS, Data Science, Desafio dos Dados 2026, Montezuma">
   <meta property="og:title" content="Radar Nexus — Transformando território em decisão">
   <meta property="og:description" content="Inteligência territorial preditiva para a inclusão produtiva de jovens.">
   <meta property="og:type" content="website">
@@ -23,7 +24,7 @@
   <header class="header" id="topo">
     <div class="container header-inner">
       <a class="logo" href="#topo" aria-label="Radar Nexus — voltar ao topo">
-        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.4"/>
           <circle cx="20" cy="20" r="10" stroke="currentColor" stroke-width="1.5"/>
           <circle cx="20" cy="6" r="3" fill="currentColor"/>
@@ -35,12 +36,9 @@
         <span class="logo-text">Radar <span class="logo-highlight">Nexus</span></span>
       </a>
 
-      <button class="mobile-menu-btn" id="menuBotao" aria-expanded="false" aria-controls="menuPrincipal" aria-label="Abrir menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+      <button class="mobile-menu-btn" id="menuBotao" aria-expanded="false" aria-controls="menuPrincipal">
+        <span class="sr-only">Abrir menu</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
 
       <nav class="nav-menu" id="menuPrincipal" aria-label="Navegação principal">
@@ -57,8 +55,540 @@
   </header>
 
   <main id="conteudo">
-    <!-- O restante do conteúdo continua igual... -->
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge">Nexus Team · Desafio dos Dados 2026</span>
+          <h1>A média nacional esconde um país que não existe.</h1>
+          <p class="lead">18,5% dos jovens brasileiros não trabalham nem estudam. Mas esse número esconde realidades completamente diferentes entre um bairro central, uma comunidade rural e um município de economia sazonal.</p>
+          <p class="support-text">O <strong>Radar Nexus</strong> cruza juventude, economia e conectividade para mostrar <em>onde agir primeiro</em> — e qual estratégia faz sentido para cada território.</p>
+          
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#explorador">Ver o IPT em ação</a>
+            <a class="btn btn-outline" href="#metodo">Como funciona</a>
+          </div>
+
+          <ul class="ods-list" aria-label="ODS trabalhados">
+            <li><span class="ods-tag ods-4">ODS 4</span></li>
+            <li><span class="ods-tag ods-8">ODS 8</span></li>
+            <li><span class="ods-tag ods-10">ODS 10</span></li>
+            <li><span class="ods-tag ods-17">ODS 17</span></li>
+          </ul>
+        </div>
+        
+        <div class="hero-visual" aria-hidden="true">
+          <div class="radar-system">
+            <div class="radar-sweep"></div>
+            <div class="radar-ring ring-1"></div>
+            <div class="radar-ring ring-2"></div>
+            <div class="radar-ring ring-3"></div>
+            <div class="radar-node node-1"></div>
+            <div class="radar-node node-2"></div>
+            <div class="radar-node node-3"></div>
+            <div class="radar-core"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <blockquote class="manifesto">
+          "A inclusão produtiva não pode parar na placa de fim do perímetro urbano. Nenhum jovem invisível: nem no centro da cidade, nem na estrada de terra."
+          <footer>— Nexus Team</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2>O endereço não pode determinar o destino.</h2>
+          <p class="section-subtitle">Ignorar as condições do lugar onde o jovem vive torna qualquer política pública menos justa e eficaz.</p>
+        </div>
+
+        <div class="grid-cards">
+          <div class="card card-highlight">
+            <div class="stat-number">22,4%</div>
+            <p class="stat-desc">dos jovens de 18 a 24 anos não trabalham nem estudam — a transição crítica para a vida adulta produtiva.</p>
+            <span class="source-tag">Fonte: IBGE/PNAD Contínua (2025)</span>
+          </div>
+          <div class="card">
+            <h3>Barreira invisível</h3>
+            <p>Um curso gratuito a 40 quilômetros pode ser tão inacessível quanto um curso pago para quem depende de transporte público precário.</p>
+          </div>
+          <div class="card">
+            <h3>Sobreposição cruel</h3>
+            <p>Transporte precário + baixa conectividade + cuidado familiar + desinformação = travessia impossível.</p>
+          </div>
+          <div class="card card-accent">
+            <div class="stat-number">1,6×</div>
+            <p class="stat-desc">mais exclusão na zona rural comparada à urbana, conforme leitura da nossa prova de conceito.</p>
+          </div>
+        </div>
+
+        <div class="quote-box">
+          <blockquote>"O Brasil convive com uma parcela expressiva de jovens que não estudam e não estão inseridos no mercado de trabalho. Essa condição não representa falta de vontade individual. Ela resulta de uma combinação de baixa renda, responsabilidades familiares, desestímulo, ausência de transporte, necessidade de trabalho informal, dificuldade de acesso a cursos e escassez de oportunidades compatíveis com a realidade local."</blockquote>
+          <cite>— Radar Nexus, 2026</cite>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="metodo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2>Sete etapas. Da base pública ao playbook de ação.</h2>
+          <p class="section-subtitle">Pipeline explicável que termina em decisão estratégica, não apenas em um mapa bonito.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">01</div>
+            <div class="timeline-content">
+              <h3>Coletar</h3>
+              <p>Bases públicas documentadas: IBGE, DataViva, Observatório da EPT, ANATEL, TIC Domicílios.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">02</div>
+            <div class="timeline-content">
+              <h3>Padronizar</h3>
+              <p>Períodos, unidades de medida e compatibilidade geográfica em unidade territorial segura.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">03</div>
+            <div class="timeline-content">
+              <h3>Cruzar</h3>
+              <p>Juventude, formação, conectividade e economia em unidade territorial segura para análise multivariada.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">04</div>
+            <div class="timeline-content">
+              <h3>Calcular IPT</h3>
+              <p>Índice de Prioridade Territorial: <code>IPT = 0,30V + 0,25F + 0,20C + 0,15D + 0,10P</code></p>
+            </div>
+          </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">05</div>
+            <div class="timeline-content">
+              <h3>Identificar</h3>
+              <p>Barreiras territoriais predominantes e público prioritário (15–29 anos, com atenção especial aos jovens "nem-nem").</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">06</div>
+            <div class="timeline-content">
+              <h3>Recomendar</h3>
+              <p>Playbook de intervenção adequado ao contexto territorial específico, evitando soluções genéricas.</p>
+            </div>
+          </div>
+          <div class="timeline-item" data-animate>
+            <div class="timeline-marker">07</div>
+            <div class="timeline-content">
+              <h3>Monitorar</h3>
+              <p>Acompanhamento em 30, 60 e 90 dias com revisão humana e indicadores de permanência e conclusão.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="explorador">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2>IPT: o índice que ordena territórios, não pessoas.</h2>
+          <p class="section-subtitle">Combinação matemática entre necessidade de intervenção e possibilidade de conexão com oportunidades.</p>
+        </div>
+
+        <div class="alert-box" role="note">
+          <div class="alert-icon">⚠</div>
+          <div class="alert-text">
+            <strong>Prova de conceito metodológica.</strong> Os valores exibidos no IPT e nos gráficos de Montezuma são <strong>estimativas demonstrativas</strong> construídas pelo pipeline Nexus Team para ilustrar a lógica do sistema. <strong>Não substituem estatísticas oficiais do IBGE, ANATEL ou DataViva.</strong> Os dados nacionais (18,5% e 22,4%) são reais e provêm da PNAD Contínua 2025.
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <aside class="dashboard-controls">
+            <label for="territorio">Selecione o território</label>
+            <div class="select-wrapper">
+              <select id="territorio" class="form-select"></select>
+            </div>
+
+            <div class="info-block">
+              <h4>Modelo conceitual</h4>
+              <p>5 dimensões com pesos iniciais, sujeitos a calibração após piloto com especialistas e comunidades locais.</p>
+            </div>
+
+            <div class="info-block">
+              <h4>Validação em 3 níveis</h4>
+              <ol class="check-list">
+                <li>Verificação técnica dos cálculos</li>
+                <li>Comparação com relatos e escuta local</li>
+                <li>Teste de ação compreensível no campo</li>
+              </ol>
+            </div>
+          </aside>
+
+          <div class="dashboard-result" aria-live="polite">
+            <div class="result-header">
+              <div>
+                <h3 id="nomeTerritorio">—</h3>
+                <p class="territorio-meta" id="territorioMeta"></p>
+              </div>
+              <div class="ipt-badge">
+                <span class="ipt-value" id="iptValor">0</span>
+                <span class="ipt-max">/100</span>
+              </div>
+              <div class="priority-tag" id="iptPrioridade">—</div>
+            </div>
+
+            <div class="dimensions-container" id="barrasDimensoes"></div>
+
+            <details class="formula-details">
+              <summary>Ver fórmula completa e legendas</summary>
+              <div class="formula-box">
+                <code>IPT = 0,30V + 0,25F + 0,20C + 0,15D + 0,10P</code>
+                <ul class="formula-legend">
+                  <li><strong>V:</strong> Vulnerabilidade socioeconômica</li>
+                  <li><strong>F:</strong> Distância formação–demanda</li>
+                  <li><strong>C:</strong> Restrição de conectividade</li>
+                  <li><strong>D:</strong> Dificuldade de deslocamento</li>
+                  <li><strong>P:</strong> Potencial de parceria local</li>
+                </ul>
+              </div>
+            </details>
+
+            <div class="action-recommended">
+              <h4>Diagnóstico → Ação</h4>
+              <div class="action-grid">
+                <div>
+                  <span class="label-tag">Barreiras críticas</span>
+                  <ul id="listaBarreiras" class="bullet-list"></ul>
+                </div>
+                <div>
+                  <span class="label-tag">Playbook recomendado</span>
+                  <p class="playbook-name" id="recomendacao"></p>
+                  <p class="channels-text" id="canais"></p>
+                </div>
+              </div>
+              <div class="indicator-box">
+                <span class="label-tag">Indicador de acompanhamento</span>
+                <p id="indicador"></p>
+              </div>
+            </div>
+
+            <div class="decision-chain" id="cadeia"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="playbooks">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2>Três playbooks. Zero soluções genéricas.</h2>
+          <p class="section-subtitle">Cada território recebe um roteiro estruturado com público, parceiros, canais, ação, indicador e prazo.</p>
+        </div>
+
+        <div class="playbooks-grid">
+          <article class="playbook-card">
+            <div class="playbook-header">
+              <span class="playbook-num">01</span>
+              <h3>Busca Ativa Multicanal</h3>
+            </div>
+            <p class="playbook-desc">Para territórios com alta vulnerabilidade e baixa conectividade digital.</p>
+            <div class="playbook-details">
+              <div class="detail-row"><span class="detail-label">Público</span><span>Jovens em territórios vulneráveis com baixa conectividade</span></div>
+              <div class="detail-row"><span class="detail-label">Canais</span><span>Presencial, telefone, SMS, rádio comunitária, materiais impressos</span></div>
+              <div class="detail-row"><span class="detail-label">Indicador</span><span>Pessoas contatadas por canal · Frequência 30/60/90 dias</span></div>
+              <div class="detail-row"><span class="detail-label">Prazo</span><span>Contínuo · ciclos mensais</span></div>
+            </div>
+            <div class="playbook-flow">
+              <span>Mapear</span> <span class="arrow">→</span> <span>Divulgar</span> <span class="arrow">→</span> <span>Orientar</span> <span class="arrow">→</span> <span>Encaminhar</span> <span class="arrow">→</span> <span>Acompanhar</span>
+            </div>
+          </article>
+
+          <article class="playbook-card">
+            <div class="playbook-header">
+              <span class="playbook-num">02</span>
+              <h3>Trilhas Conectadas</h3>
+            </div>
+            <p class="playbook-desc">Para territórios com economia ativa, mas com formação profissional desalinhada.</p>
+            <div class="playbook-details">
+              <div class="detail-row"><span class="detail-label">Público</span><span>Jovens em territórios com economia ativa e formação desalinhada</span></div>
+              <div class="detail-row"><span class="detail-label">Canais</span><span>Presencial e digital, onde a conectividade permitir</span></div>
+              <div class="detail-row"><span class="detail-label">Indicador</span><span>Inscrições qualificadas · Encaminhamentos · Permanência</span></div>
+              <div class="detail-row"><span class="detail-label">Prazo</span><span>Trilhas modulares de 8 a 16 semanas</span></div>
+            </div>
+            <div class="playbook-flow">
+              <span>Competências</span> <span class="arrow">→</span> <span>Formação</span> <span class="arrow">→</span> <span>Estágio</span> <span class="arrow">→</span> <span>Contratação</span>
+            </div>
+          </article>
+
+          <article class="playbook-card">
+            <div class="playbook-header">
+              <span class="playbook-num">03</span>
+              <h3>Núcleos de Oportunidade</h3>
+            </div>
+            <p class="playbook-desc">Para áreas rurais ou muito dispersas geograficamente.</p>
+            <div class="playbook-details">
+              <div class="detail-row"><span class="detail-label">Público</span><span>Jovens de áreas rurais ou muito dispersas</span></div>
+              <div class="detail-row"><span class="detail-label">Canais</span><span>Presencial e atendimento telefônico em espaços reconhecidos</span></div>
+              <div class="detail-row"><span class="detail-label">Indicador</span><span>Frequência · Permanência · Encaminhamentos regionais</span></div>
+              <div class="detail-row"><span class="detail-label">Prazo</span><span>Núcleos fixos com agenda semanal</span></div>
+            </div>
+            <div class="playbook-flow">
+              <span>Acesso</span> <span class="arrow">→</span> <span>Oficinas</span> <span class="arrow">→</span> <span>Conexão regional</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="dados">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">05</span>
+          <h2>Evidências visuais com fonte, período e limite.</h2>
+          <p class="section-subtitle">Cada gráfico responde uma pergunta específica. Nenhum dado é apresentado sem seu devido contexto.</p>
+        </div>
+
+        <div class="charts-grid">
+          <figure class="chart-card" data-animate>
+            <div class="chart-visual" id="graficoSemSem" role="img" aria-label="Gráfico comparativo urbano-rural da taxa nem-nem"></div>
+            <figcaption>
+              <h3>Urbano vs Rural: a barreira muda</h3>
+              <p class="chart-meta"><strong>Base real:</strong> IBGE/PNAD Contínua 2025 (18,5% nacional). <strong>Recorte municipal:</strong> estimativa demonstrativa da prova de conceito Nexus Team.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="chart-card" data-animate>
+            <div class="chart-visual" id="graficoInternet" role="img" aria-label="Acesso à internet por território"></div>
+            <figcaption>
+              <h3>Qual canal alcança cada território?</h3>
+              <p class="chart-meta"><strong>Referência nacional:</strong> TIC Domicílios/CETIC.br 2025. <strong>Valores por território:</strong> estimativas demonstrativas para ilustrar a lógica de escolha de canal.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="chart-card chart-wide" data-animate>
+            <div class="chart-visual" id="graficoTop" role="img" aria-label="Top 10 territórios por prioridade"></div>
+            <figcaption>
+              <h3>Fila de trabalho para intervenção</h3>
+              <p class="chart-meta">Índice 0–100 calculado sobre dados demonstrativos. <strong>Não é ranking oficial de comunidades</strong> — é priorização territorial ilustrativa do modelo IPT.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="chart-card chart-wide" data-animate>
+            <div class="chart-visual" id="graficoEconomia" role="img" aria-label="Economia local versus formação"></div>
+            <figcaption>
+              <h3>Economia local × formação: o vão</h3>
+              <p class="chart-meta"><strong>Fontes conceituais:</strong> DataViva e Observatório da EPT. <strong>Valores específicos:</strong> demonstrativos para ilustrar o desalinhamento entre oferta formativa e demanda econômica local.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="impacto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">06</span>
+          <h2>Prova de conceito: 4 semanas, 2 territórios, 0 invenção.</h2>
+          <p class="section-subtitle">O que existe é evidência. O que há adiante é meta e indicador mensurável.</p>
+        </div>
+
+        <div class="impact-grid">
+          <div class="impact-card">
+            <h3>Meta primeiro ciclo</h3>
+            <p class="impact-number">350–450</p>
+            <p>jovens em Montezuma: população 15–29 anos (≈22–24%) × taxa "nem-nem" × meta de alcance de 70% com os três playbooks.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Indicadores previstos</h3>
+            <ul class="impact-list">
+              <li>Alcance territorial (mensal)</li>
+              <li>Taxa de conversão (mensal)</li>
+              <li>Permanência 30/60/90 dias</li>
+              <li>Conclusão por turma</li>
+              <li>Equidade de acesso (trimestral)</li>
+            </ul>
+          </div>
+          <div class="impact-card">
+            <h3>Sustentabilidade</h3>
+            <p>Prioriza infraestrutura existente: escolas, associações, rádio, SMS. Reduz deslocamentos desnecessários e evita novas estruturas físicas.</p>
+          </div>
+          <div class="impact-card">
+            <h3>Validação comunitária</h3>
+            <p>Oficinas com jovens, teste de canais, registros de contato e ajustes documentados (Anexo A do projeto).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="transparencia">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">07</span>
+          <h2>Governança: dados agregados, decisão humana.</h2>
+          <p class="section-subtitle">Explicabilidade algorítmica, conformidade com a LGPD e soberania do julgamento humano.</p>
+        </div>
+
+        <div class="governance-grid">
+          <div class="governance-card">
+            <h3>Fontes documentadas</h3>
+            <div class="source-item"><strong>IBGE · PNAD Contínua</strong><p>População, renda, escolaridade, ruralidade, jovens "nem-nem"</p></div>
+            <div class="source-item"><strong>DataViva</strong><p>Atividades econômicas e especializações produtivas locais</p></div>
+            <div class="source-item"><strong>Observatório da EPT</strong><p>Cursos, matrículas e oferta formativa profissionalizante</p></div>
+            <div class="source-item"><strong>ANATEL · TIC Domicílios</strong><p>Cobertura, acesso e qualidade estimada do sinal de internet</p></div>
+            <div class="source-item"><strong>Escuta local</strong><p>Entrevistas, oficinas participativas e questionários voluntários</p></div>
+          </div>
+
+          <div class="governance-card privacy-card">
+            <h3>Dados para localizar barreiras</h3>
+            <p class="privacy-highlight">Nunca para rotular pessoas.</p>
+            <ul class="privacy-list">
+              <li>Preferencialmente dados agregados por território</li>
+              <li>Não solicita nome, documento ou endereço exato</li>
+              <li>Cadastros voluntários com finalidade definida</li>
+              <li>Acesso restrito e prazo de retenção determinado</li>
+              <li>Exclusão garantida (Lei 13.709/2018 — LGPD)</li>
+              <li>Revisão humana obrigatória antes de qualquer decisão</li>
+            </ul>
+            <div class="privacy-quotes">
+              <p>"O Radar não seleciona pessoas."</p>
+              <p>"O Radar não define quem merece oportunidade."</p>
+              <p>"O Radar identifica onde existem barreiras."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="honesty-box">
+          <h4>O que é real, o que é estimativa</h4>
+          <div class="honesty-columns">
+            <div>
+              <span class="data-label real">Dados reais (fontes oficiais)</span>
+              <ul>
+                <li>18,5% — jovens 15–29 anos "nem-nem" (PNAD 2025)</li>
+                <li>22,4% — jovens 18–24 anos "nem-nem" (PNAD 2025)</li>
+                <li>Fontes: IBGE, DataViva, Observatório da EPT, ANATEL, TIC Domicílios</li>
+                <li>Fórmula do IPT, pesos iniciais e estrutura dos 3 playbooks</li>
+              </ul>
+            </div>
+            <div>
+              <span class="data-label demo">Dados demonstrativos (prova de conceito)</span>
+              <ul>
+                <li>Valores específicos de Montezuma (ex: rural 38–42%, internet 10–15%)</li>
+                <li>5 territórios do explorador IPT interativo</li>
+                <li>Top 10 de priorização territorial</li>
+                <li>Valores de economia × formação por setor</li>
+                <li>Meta de 350–450 jovens (estimativa de alcance)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="honesty-note">Essa distinção é parte do critério 4 da rubrica (Tratamento de dados): deixar claro o que é medição oficial e o que é modelagem metodológica.</p>
+        </div>
+
+        <div class="limitations-box">
+          <h4>Limitações assumidas</h4>
+          <p>Defasagem temporal de bases públicas · Escalas geográficas diferentes · Conectividade medida por cobertura não revela integralmente qualidade do sinal, preço ou habilidade digital do usuário · Nem toda atividade econômica registrada representa trabalho decente · Nenhum indicador substitui a escuta de quem vive no território.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="midias">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">08</span>
+          <h2>Ecossistema transmídia: cada formato, uma função.</h2>
+          <p class="section-subtitle">Relatório fundamenta · Site explora · Vídeo apresenta · Podcast aprofunda.</p>
+        </div>
+
+        <div class="media-grid">
+          <a href="#explorador" class="media-card active" aria-current="page">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Site / Mapa Interativo</h3>
+            <p>Explore os dados e veja como o Radar funciona na prática. Visualize o IPT por território, compare urbano e rural, e entenda a metodologia.</p>
+            <span class="media-status">Você está aqui</span>
+          </a>
+          
+          <a href="https://www.instagram.com/reel/DcpWIWnuF-D/?igsi=MTVzZTZkcXhkeWNlYg==" target="_blank" rel="noopener" class="media-card" aria-label="Reel do projeto no Instagram">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </div>
+            <h3>Instagram Reels</h3>
+            <p>Um olhar dinâmico e visual sobre o Radar Nexus, mostrando o impacto direto e a metodologia aplicada nos territórios de Montezuma em formato de vídeo curto.</p>
+            <span class="media-status instagram">Assistir no Instagram</span>
+          </a>
+          
+          <a href="https://open.spotify.com/episode/00xFkNKHyKeNQQVHY3QqXf?si=v-tlraGzT7ucc1u02bbrJQ" target="_blank" rel="noopener" class="media-card" aria-label="Podcast do projeto">
+            <div class="media-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a9 9 0 0 0-9 9v7c0 1.66 1.34 3 3 3h3v-8H5v-2c0-3.87 3.13-7 7-7s7 3.13 7 7v2h-4v8h3c1.66 0 3-1.34 3-3v-7a9 9 0 0 0-9-9z"/></svg>
+            </div>
+            <h3>Podcast (3–5 min)</h3>
+            <p>Conversa sobre o problema, as pessoas, as decisões e os limites do Radar. Aprofunda a reflexão sobre barreiras estruturais e responsabilidade ética.</p>
+            <span class="media-status spotify">Publicado no Spotify</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="referencias">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">09</span>
+          <h2>Referências</h2>
+          <p class="section-subtitle">Fontes confiáveis, citação completa e total rastreabilidade.</p>
+        </div>
+
+        <ol class="references-list">
+          <li>AGÊNCIA NACIONAL DE TELECOMUNICAÇÕES (ANATEL). <strong>Painéis de dados: cobertura e qualidade</strong>. Brasília, DF, 2026. Disponível em: <a href="https://informacoes.anatel.gov.br/paineis/" target="_blank" rel="noopener">informacoes.anatel.gov.br/paineis/</a>. Acesso em: 9 ago. 2026.</li>
+          <li>BRASIL. Instituto Brasileiro de Geografia e Estatística. <strong>Censo Demográfico 2022</strong>. Rio de Janeiro: IBGE, 2023. Disponível em: <a href="https://www.ibge.gov.br/estatisticas/sociais/populacao.html" target="_blank" rel="noopener">ibge.gov.br</a>. Acesso em: 9 ago. 2026.</li>
+          <li>BRASIL. Instituto Brasileiro de Geografia e Estatística. <strong>Pesquisa Nacional por Amostra de Domicílios Contínua</strong>. Rio de Janeiro: IBGE, 2025. Disponível em: <a href="https://www.ibge.gov.br/estatisticas/sociais/trabalho.html" target="_blank" rel="noopener">ibge.gov.br</a>. Acesso em: 9 ago. 2026.</li>
+          <li>BRASIL. Lei nº 13.709, de 14 de agosto de 2018. <strong>Lei Geral de Proteção de Dados Pessoais (LGPD)</strong>. Brasília, DF: Presidência da República, 2018.</li>
+          <li>BRASIL. Ministério do Trabalho e Emprego. <strong>Aprendizagem profissional</strong>. Brasília, DF, 2026.</li>
+          <li>CETIC.br. <strong>TIC Domicílios 2025</strong>. Disponível em: <a href="https://cetic.br/pt/pesquisa/domicilios/" target="_blank" rel="noopener">cetic.br</a>. Acesso em: 9 ago. 2026.</li>
+          <li>DATAVIVA. <strong>DataViva: visualizações de dados socioeconômicos brasileiros</strong>. 2026. Disponível em: <a href="https://dataviva.info/" target="_blank" rel="noopener">dataviva.info</a>. Acesso em: 9 ago. 2026.</li>
+          <li>OBSERVATÓRIO DA EDUCAÇÃO PROFISSIONAL E TECNOLÓGICA. <strong>Dados e informações da educação profissional e tecnológica</strong>. Brasília: Ministério da Educação, 2026.</li>
+          <li>ORGANIZAÇÃO DAS NAÇÕES UNIDAS. <strong>Objetivos de Desenvolvimento Sustentável</strong>. Brasília: ONU Brasil, 2026. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs" target="_blank" rel="noopener">brasil.un.org</a>. Acesso em: 9 ago. 2026.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="closing-section">
+      <div class="container">
+        <h2>Nenhum jovem invisível.</h2>
+        <p class="closing-subtitle">Nem no centro da cidade. Nem na estrada de terra.</p>
+        <p class="closing-text">Quando o território entra no diagnóstico, a oportunidade pode chegar por outro caminho.</p>
+      </div>
+    </section>
+
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong>Nexus Team</strong>
+          <p>Apoliana de Almeida Rocha<br>Álvaro Cordeiro Sales<br>Erick Luan Araújo dos Santos<br>Silvio Sales Ferreira</p>
+        </div>
+        <div>
+          <strong>Escola Estadual Edson Alves Pereira</strong>
+          <p>Montezuma — Minas Gerais<br>Orientador: Rodolfo Pablo Fernandes</p>
+        </div>
+        <div>
+          <strong>Desafio dos Dados 2026</strong>
+          <p>Pergunta-chave 1 — Inclusão Produtiva de Jovens<br>ODS 4 · ODS 8 · ODS 10 · ODS 17</p>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Nexus Team · Dados nacionais: IBGE/PNAD 2025 (reais) · Dados municipais: estimativas demonstrativas da prova de conceito · LGPD 13.709/2018</p>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
